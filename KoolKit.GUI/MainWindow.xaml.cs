@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using KoolKit.DataAccess;
+using KoolKit.DataAccess.Entities;
 
 namespace KoolKit.GUI
 {
@@ -20,13 +22,22 @@ namespace KoolKit.GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private ToolKit ToolKitData;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            // read teh ToolKit data
+            // setup watching of ToolKit Data
+            var ToolKitJsonReader = new ToolKitJsonReader(@"C:\path\to\data\file");
+            ToolKitJsonReader.Changed += new ToolKitJsonReader.ToolKitDataEventHandler(ToolKitDataChanged);
 
+        }
 
+        private void ToolKitDataChanged(object source, EventArgs e) {
+            // Teh ToolKit data changed!!!!!
+            ToolKitData = ToolKitJsonReader.ToolKitData;
         }
     }
 }

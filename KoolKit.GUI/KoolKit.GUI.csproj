@@ -93,6 +93,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KoolKit.DataAccess\KoolKit.DataAccess.csproj">
+      <Project>{eb768639-d0a2-4c7a-abdb-c0d5dd9ea0d6}</Project>
+      <Name>KoolKit.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KoolKit.Sync\KoolKit.Sync.csproj">
+      <Project>{9cb3838d-6e34-4bc8-8388-415cfdbda9fd}</Project>
+      <Name>KoolKit.Sync</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
