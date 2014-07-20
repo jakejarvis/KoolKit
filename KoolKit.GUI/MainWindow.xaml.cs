@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using KoolKit.DataAccess;
 using KoolKit.DataAccess.Entities;
+using KoolKit.Core.Enums;
 
 namespace KoolKit.GUI
 {
@@ -30,9 +31,27 @@ namespace KoolKit.GUI
             InitializeComponent();
 
             // setup watching of ToolKit Data
-            var ToolKitJsonReader = new ToolKitJsonReader(@"C:\path\to\data\file");
-            ToolKitJsonReader.Changed += new ToolKitJsonReader.ToolKitDataEventHandler(ToolKitDataChanged);
+            //var ToolKitJsonReader = new ToolKitJsonReader(@"C:\path\to\data\file");
+            //ToolKitJsonReader.Changed += new ToolKitJsonReader.ToolKitDataEventHandler(ToolKitDataChanged);
 
+            SetupUI(ProgramTypes.TechCamp);
+            
+        }
+
+        private void SetupUI(ProgramTypes programType) {
+            switch (programType) {
+                case ProgramTypes.ArtsAcademy:
+                    break;
+                case ProgramTypes.ProgrammingAcademy:
+                    break;
+                case ProgramTypes.Mini:
+                    break;
+                case ProgramTypes.TechCamp:
+                case ProgramTypes.BetaCamp:
+                default:
+                    Resources["TextColor"] = Color.FromArgb(255, 45, 255, 85);
+                    break;
+            }
         }
 
         private void ToolKitDataChanged(object source, EventArgs e) {
@@ -40,4 +59,5 @@ namespace KoolKit.GUI
             ToolKitData = ToolKitJsonReader.ToolKitData;
         }
     }
+
 }

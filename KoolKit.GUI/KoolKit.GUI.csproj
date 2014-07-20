@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>KoolKit.GUI.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -94,6 +97,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\KoolKit.Core\KoolKit.Core.csproj">
+      <Project>{03e08937-1fec-4e65-ae96-1ab502e16c3b}</Project>
+      <Name>KoolKit.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\KoolKit.DataAccess\KoolKit.DataAccess.csproj">
       <Project>{eb768639-d0a2-4c7a-abdb-c0d5dd9ea0d6}</Project>
       <Name>KoolKit.DataAccess</Name>

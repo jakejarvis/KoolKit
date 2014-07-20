@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoolKit.GUI", "KoolKit.GUI\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoolKit.DataAccess", "KoolKit.DataAccess\KoolKit.DataAccess.csproj", "{EB768639-D0A2-4C7A-ABDB-C0D5DD9EA0D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoolKit.Core", "KoolKit.Core\KoolKit.Core.csproj", "{03E08937-1FEC-4E65-AE96-1AB502E16C3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EB768639-D0A2-4C7A-ABDB-C0D5DD9EA0D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB768639-D0A2-4C7A-ABDB-C0D5DD9EA0D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB768639-D0A2-4C7A-ABDB-C0D5DD9EA0D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E08937-1FEC-4E65-AE96-1AB502E16C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E08937-1FEC-4E65-AE96-1AB502E16C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E08937-1FEC-4E65-AE96-1AB502E16C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E08937-1FEC-4E65-AE96-1AB502E16C3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
